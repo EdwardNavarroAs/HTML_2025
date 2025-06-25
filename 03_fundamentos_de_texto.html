@@ -50,20 +50,44 @@
     <h2>Listas en HTML</h2>
     <p>Las listas permiten agrupar elementos relacionados:</p>
 
-    <ol>
-        <!-- <ol> crea una lista ordenada (numerada). -->
-        <li>Primer ítem de la lista numerada.</li>
-        <li>Segundo ítem de la lista numerada.</li>
+    <h3>Listas ordenadas</h3>
+    <p>Se usan cuando el orden de los elementos es importante.</p>
+
+    <!-- <ol> crea una lista ordenada (numerada). -->
+    <!-- Atributos útiles de <ol>: 
+         - start: especifica el número de inicio (ej: start="5")
+         - type: tipo de numeración: 1 (números), A (letras mayúsculas), a (letras minúsculas), I (romanos mayús), i (romanos minús)
+         - reversed: invierte el orden (de mayor a menor) -->
+    <ol start="5" type="I">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
     </ol>
 
+    <h3>Listas no ordenadas</h3>
+    <p>Se usan cuando el orden no importa, y los elementos son de igual jerarquía.</p>
+
+    <!-- <ul> solo admite viñetas, sin atributos semánticos importantes. 
+         Para cambiar el tipo de viñeta se usa CSS: list-style-type: circle | square | disc | none -->
     <ul>
-        <!-- <ul> crea una lista no ordenada (con viñetas). -->
-        <li>Ítem de lista sin orden.</li>
-        <li>Otro ítem importante.</li>
+        <li>Elemento sin orden</li>
+        <li>Otro elemento</li>
     </ul>
 
-    <!-- <li> representa un elemento individual dentro de una lista, ya sea ordenada (<ol>) o no ordenada (<ul>). 
-         Cada <li> se renderiza con un número o viñeta dependiendo del tipo de lista. -->
+    <!-- <li> representa un ítem individual dentro de <ol> o <ul>. -->
+
+    <h3>Listas de definiciones</h3>
+    <p>Se utilizan para glosarios, descripciones técnicas o pares término/definición.</p>
+
+    <!-- <dl>: description list, contiene pares de término-definición -->
+    <!-- <dt>: término (definition term) -->
+    <!-- <dd>: descripción (definition description) -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado para estructurar contenido web.</dd>
+        <dt>CSS</dt>
+        <dd>Lenguaje de estilo para diseñar páginas web.</dd>
+    </dl>
 
     <!-- 
         SOBRE ETIQUETAS <b>, <i> y <u> (HTML5):

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    HTML también dispone de elementos de bloque que se pueden utilizar para estructurar las distintas áreas de tu sitio web (como el encabezado,
+    el menú de navegación o la parte del contenido principal). A esto se le conoce como la estructura básica de una página web.
+
+    Las páginas web pueden y se deben diferenciar entre sí, pero todas tienden a contener elementos comunes, a menos que estén destinadas a mostrar un video o un juego a pantalla completa, 
+    o que formen parte de un proyecto artístico o estén mal estructuradas. Estos elementos comunes son:
+
+    encabezado:
+        Normalmente formado por una franja superior con un título, logotipo y quizá un lema. Suele permanecer invariable entre páginas.
+
+    barra de navegación:
+        Contiene enlaces a secciones principales del sitio. Puede estar integrada en el encabezado o separada por accesibilidad.
+
+    contenido principal:
+        Parte central y variable de la página: artículos, videos, noticias, etc.
+
+    barra lateral:
+        Información complementaria: enlaces, biografías, publicidad, etc. Suele estar relacionada con el contenido principal.
+
+    pie de página:
+        Parte inferior con información secundaria: contacto, copyright, enlaces rápidos. También se usa para SEO.
+
+    HTML dispone de etiquetas adecuadas para representar estas secciones semánticas:
+        - encabezado: <header>
+        - navegación: <nav>
+        - contenido principal: <main>, con subsecciones como <article>, <section>, <aside>, <div>
+        - barra lateral: <aside>
+        - pie de página: <footer>
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Web en HTML</title>
+</head>
+
+<body>
+    <!-- <header> representa el encabezado de la página. Puede contener logotipo, título, lema, etc. -->
+    <header>
+        <h1>04 - Estructura Básica de una Página Web en HTML</h1>
+    </header>
+
+    <!-- <nav> representa la barra de navegación principal, con enlaces a las secciones principales del sitio web. -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nuestro equipo</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <!-- Un formulario de búsqueda permite al usuario hacer consultas dentro del sitio. -->
+        <form>
+            <input type="search" name="q" placeholder="Buscar" />
+            <input type="submit" value="¡Vamos!" />
+        </form>
+    </nav>
+
+    <!-- <main> representa el contenido principal del documento. Solo debe haber uno por página. -->
+    <main>
+        <!-- <section> agrupa contenido relacionado dentro del contenido principal. -->
+        <section>
+            <h2>Contenido principal de la página</h2>
+            <p>Esta es la parte que debe variar entre una página y otra dentro del mismo sitio web.</p>
+        </section>
+
+        <!-- <article> representa contenido autocontenible (noticias, publicaciones, entradas de blog, etc.). -->
+        <article>
+            <h2>Título del artículo</h2>
+            <p>Contenido principal del artículo. Este contenido podría distribuirse de forma independiente.</p>
+        </article>
+
+        <!-- <aside> representa contenido adicional relacionado con el contenido principal (como enlaces, citas, publicidad, etc.). -->
+        <aside>
+            <h2>Contenido Relacionado</h2>
+            <ul>
+                <li><a href="#">Contenido relacionado 1</a></li>
+                <li><a href="#">Contenido relacionado 2</a></li>
+                <li><a href="#">Contenido relacionado 3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- <footer> representa el pie de página, que contiene información secundaria o de contacto. -->
+    <footer>
+        <!-- <address> representa información de contacto del autor o sitio web. -->
+        <address>
+            <p>Teléfono: 123-123-123</p>
+            <p>Email: contacto@ejemplo.com</p>
+        </address>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+</body>
+</html>
