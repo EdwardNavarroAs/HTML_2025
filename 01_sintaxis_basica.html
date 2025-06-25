@@ -18,41 +18,46 @@
 <!-- <html> es la etiqueta raíz del documento HTML.
      El atributo lang="es" indica que el idioma principal del contenido es español, lo cual mejora la accesibilidad y el SEO. -->
 
-<head>
-  <!-- La etiqueta <head> contiene metadatos que no se muestran directamente en la página.
-       Incluye información como la codificación de caracteres, el título del documento, enlaces a archivos externos, descripciones, etc. -->
+     <head>
+          <!-- La etiqueta <head> contiene metadatos que no se muestran directamente en la página.
+               Incluye información como la codificación de caracteres, el título del documento, enlaces a archivos externos, descripciones, etc. -->
 
-  <meta charset="utf-8">
-  <!-- Define la codificación de caracteres del documento como UTF-8, que permite representar la mayoría de idiomas del mundo. -->
+          <meta charset="utf-8">
+          <!-- Define la codificación de caracteres del documento como UTF-8, que permite representar la mayoría de idiomas del mundo. -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Hace que el sitio sea adaptable a diferentes tamaños de pantalla (diseño responsivo).
-       width=device-width ajusta el ancho al del dispositivo y initial-scale=1 define el nivel de zoom inicial. -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!-- Hace que el sitio sea adaptable a diferentes tamaños de pantalla (diseño responsivo).
+               width=device-width ajusta el ancho al del dispositivo y initial-scale=1 define el nivel de zoom inicial. -->
 
-  <title>Mi primera página web en HTML</title>
-  <!-- El título se muestra en la pestaña del navegador y también puede ser leído por motores de búsqueda. -->
-</head>
+          <title>Sintaxis básica en HTML</title>
+          <!-- El título se muestra en la pestaña del navegador y también puede ser leído por motores de búsqueda. -->
+     </head>
 
-<body>
-  <!-- La etiqueta <body> contiene todo el contenido visible de la página: texto, imágenes, botones, enlaces, videos, etc. -->
+     <body>
+          <!-- La etiqueta <body> contiene todo el contenido visible de la página: texto, imágenes, botones, enlaces, videos, etc. -->
 
-  <h1>Soy un Encabezado Principal</h1>
-  <!-- Los encabezados (<h1> hasta <h6>) definen títulos o subtítulos. <h1> es el más importante y solo debería usarse una vez por página. -->
+          <h1>01 - Sintaxis básica de HTML</h1>
+          <!-- Los encabezados (<h1> hasta <h6>) definen títulos o subtítulos. <h1> es el más importante y solo debería usarse una vez por página. -->
 
-  <p>Este es un párrafo de ejemplo que forma parte del contenido visible en la página.</p>
-  <!-- <p> representa un párrafo de texto. El navegador añade automáticamente un espacio (margen) antes y después de cada párrafo. -->
+          <p><strong>HTML</strong> (HyperText Markup Language) es un <em>lenguaje de marcado</em> que se utiliza para estructurar el contenido de las páginas web.</p>
+          <!--<p> representa un párrafo de texto. El navegador añade automáticamente un espacio (margen) antes y después de cada párrafo.
+               <em> se usa para enfatizar texto. Por defecto se ve en cursiva.
+               <strong> se usa para destacar texto con importancia. Por defecto se ve en negrita.-->
+          <p>Un documento HTML se compone de etiquetas (o elementos) que indican cómo debe presentarse o comportarse cada parte del contenido</p>
 
-  <p><strong>HTML</strong> es un <em>lenguaje de marcado</em> que define la estructura del contenido web.</p>
-  <!-- <strong> se usa para destacar texto con importancia. Por defecto se ve en negrita.
-       <em> se usa para enfatizar texto. Por defecto se ve en cursiva. -->
-
-  <p>Las etiquetas pueden tener <strong>atributos</strong> como <code>lang="es"</code> que indican el idioma, o <code>charset="utf-8"</code> para definir la codificación.</p>
-  <!-- <code> se usa para representar fragmentos de código en línea. -->
-
-  <p>Algunas etiquetas son "vacías", como <code>&lt;br&gt;</code> o <code>&lt;img&gt;</code>, y no necesitan etiqueta de cierre.</p>
-  <!-- &lt; es una entidad HTML que representa el símbolo menor que (<).
-       Se utiliza para mostrar el carácter "<" como texto, sin que el navegador lo interprete como una etiqueta. 
-       Por ejemplo: &lt;br&gt; se muestra como <br> sin que el navegador intente usarlo como una etiqueta real. -->
-
-</body>
+          <ul>
+          <!-- <ul> (unordered list) crea una lista desordenada, es decir, cuyos elementos aparecen con viñetas (•) en lugar de números.
+          Se usa cuando el orden de los elementos no es relevante. -->
+               <li>Las etiquetas normalmente tienen una apertura y un cierre. Ejemplo: <code>&lt;p&gt; ... &lt;/p&gt;</code>.</li>
+               <!-- <li> (list item) representa un elemento dentro de una lista, ya sea ordenada (<ol>) o desordenada (<ul>).
+                    Cada <li> va dentro de un contenedor de lista como <ul> o <ol>. -->
+               <!-- &lt; es una entidad HTML que representa el símbolo menor que (<).
+               Se utiliza para mostrar el carácter "<" como texto, sin que el navegador lo interprete como una etiqueta. 
+               Por ejemplo: &lt;br&gt; se muestra como <br> sin que el navegador intente usarlo como una etiqueta real. -->
+               <li>Algunas etiquetas son vacías, es decir, no tienen contenido interno ni cierre. Ejemplo: <code>&lt;img&gt;</code> o <code>&lt;br&gt;</code>.</li>
+               <li>Las etiquetas pueden tener <strong>atributos</strong> que agregan información adicional. Ejemplo: <code>lang="es"</code>, <code>class="boton"</code>.</li>
+               <li>Algunos atributos son booleanos, como <code>disabled</code>, <code>checked</code> o <code>autoplay</code>.</li>
+               <!-- <code> se usa para representar fragmentos de código en línea. -->
+          </ul> 
+     </body>
 </html>
