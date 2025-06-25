@@ -18,17 +18,17 @@
 <body>
     <!-- En HTML los encabezados (<h1> hasta <h6>) definen títulos o subtítulos. Donde <h1> es el más importante. -->
     <!-- Hay seis elementos de encabezado: <h1>, <h2>, <h3>, <h4>, <h5> y <h6>. Cada uno representa un nivel jerárquico diferente:
-        <h1> para el título principal, <h2> para subtítulos, <h3> para subtítulos de <h2>, y así sucesivamente. -->
+         <h1> para el título principal, <h2> para subtítulos, <h3> para subtítulos de <h2>, y así sucesivamente. -->
     <h1>03 - Fundamentos de texto en HTML</h1>
-    <!-- En HTML solo debe haber un <h1> por página. Representa el título principal del documento. -->
 
     <p>La mayor parte del texto estructurado en HTML está compuesto por <strong>encabezados</strong> y <strong>párrafos</strong>.</p>
     <!-- <p> representa un párrafo. El navegador añade automáticamente un espacio antes y después. -->
-    <!-- <strong> se usa para marcar texto con énfasis fuerte (semánticamente importante); se muestra en negrita. -->
+    <!-- <strong> indica que el texto tiene gran importancia semántica (por ejemplo, palabras clave o advertencias importantes).
+         Tiene valor semántico para accesibilidad y mejora el SEO. -->
 
     <h2>Título de un capítulo del libro</h2>
     <p>Este sería el contenido principal del capítulo. Un <em>capítulo</em> puede estar dividido en varias secciones.</p>
-    <!-- <em> («emphasis») se usa para énfasis leve; por defecto se muestra en cursiva. -->
+    <!-- <em> («emphasis») indica énfasis leve o contextual (como una palabra en contraste o una aclaración). También aporta semántica útil. -->
 
     <h3>Título de una sección del capítulo</h3>
     <p>Esta sección amplía una parte específica del contenido del capítulo anterior.</p>
@@ -37,14 +37,14 @@
     <p>HTML permite dar <em>énfasis visual</em> y semántico al contenido:</p>
     <ul>
         <!-- <ul> crea una lista no ordenada (con viñetas). -->
-        <li><code>&lt;strong&gt;</code>: Indica un texto importante (se ve en negrita). Por ejemplo: <strong>importante</strong>.</li>
-        <li><code>&lt;em&gt;</code>: Indica énfasis (se ve en cursiva). Por ejemplo: <em>enfatizado</em>.</li>
-        <li><code>&lt;mark&gt;</code>: Resalta texto como si estuviera subrayado con marcador. Por ejemplo: <mark>resaltado</mark>.</li>
-        <!-- <mark> se usa para resaltar texto relevante en un contexto determinado. -->
-        <li><code>&lt;b&gt;</code>: Resalta texto con estilo negrita **sin énfasis semántico**. Por ejemplo: <b>nombre de producto</b>.</li>
-        <!-- <b> se usa para resaltar texto visualmente (negrita) sin implicar que es importante. En HTML5 puede usarse para destacar nombres de productos, frases clave, etc. -->
-        <li><code>&lt;i&gt;</code>: Muestra texto en cursiva **sin énfasis semántico**. Por ejemplo: <i>palabra extranjera</i>.</li>
-        <!-- <i> se usa para representar fragmentos que tradicionalmente se muestran en cursiva, como expresiones extranjeras, pensamientos, taxonomías, etc. -->
+        <li><code>&lt;strong&gt;</code>: Indica texto importante (se ve en negrita). Aporta semántica y mejora el SEO.</li>
+        <li><code>&lt;em&gt;</code>: Indica énfasis (se ve en cursiva). Aporta semántica útil para lectores de pantalla.</li>
+        <li><code>&lt;mark&gt;</code>: Resalta texto como si estuviera subrayado con marcador. Se usa para destacar coincidencias o resultados en contexto.</li>
+        <!-- <mark> se usa para resaltar texto que es relevante en el contexto actual, como coincidencias de búsqueda o información clave temporal. -->
+        <li><code>&lt;b&gt;</code>: Muestra texto en negrita, pero sin semántica. Se usa solo cuando la presentación visual es necesaria, como nombres de productos.</li>
+        <li><code>&lt;i&gt;</code>: Muestra texto en cursiva, sin énfasis semántico. Se usa para palabras extranjeras, pensamientos, términos técnicos, etc.</li>
+        <li><code>&lt;u&gt;</code>: Subraya texto. Puede usarse para nombres propios o errores ortográficos, pero debe evitarse para enlaces visuales para no confundir al usuario.</li>
+        <li><code>&lt;span&gt;</code>: No tiene significado semántico, se usa como contenedor genérico para aplicar estilos con CSS o lógica con JavaScript.</li>
     </ul>
 
     <h2>Listas en HTML</h2>
@@ -63,7 +63,22 @@
     </ul>
 
     <!-- <li> representa un elemento individual dentro de una lista, ya sea ordenada (<ol>) o no ordenada (<ul>). 
-         Cada <li> es un ítem y se renderiza con un número o viñeta dependiendo del tipo de lista. -->
+         Cada <li> se renderiza con un número o viñeta dependiendo del tipo de lista. -->
+
+    <!-- 
+        SOBRE ETIQUETAS <b>, <i> y <u> (HTML5):
+        - Estas etiquetas fueron originalmente "de presentación", sin valor semántico.
+        - En HTML5 se redefinieron con usos semánticos específicos, pero limitados:
+            <b> = negrita sin énfasis → palabras clave, nombres de productos.
+            <i> = cursiva tradicional → extranjerismos, pensamientos, términos técnicos.
+            <u> = subrayado especial → errores, nombres propios, advertencias (¡pero no usar para enlaces!).
+        - No mejoran el SEO como <strong>, <em> o <mark>.
+        - Si solo necesitas dar estilo visual, lo mejor es usar <span> con CSS.
+
+        SOBRE <span>:
+        - No tiene semántica propia.
+        - Ideal como contenedor neutro para aplicar estilos visuales (color, fuente, tamaño) o manipular con JavaScript.
+    -->
 
     <!-- 
         IMPORTANCIA DE UNA BUENA ESTRUCTURA DE TEXTO EN HTML:
