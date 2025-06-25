@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Una de las principales funciones de HTML es dar al texto estructura y significado (semántica),
+    de forma que un navegador pueda mostrarlo correctamente y los usuarios (o tecnologías como lectores de pantalla) lo entiendan.
+    Este archivo muestra cómo estructurar contenido textual con encabezados, párrafos, énfasis y listas.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Texto en HTML</title>
+    <!--
+        La mayor parte del texto estructurado está compuesto por encabezados y párrafos, independientemente de si es una historia,
+        un periódico, un libro de texto, una revista, etc. El contenido estructurado simplifica la experiencia en la lectura y se disfruta más.
+    -->
+</head>
+
+<body>
+    <!-- En HTML los encabezados (<h1> hasta <h6>) definen títulos o subtítulos. Donde <h1> es el más importante. -->
+    <!-- Hay seis elementos de encabezado: <h1>, <h2>, <h3>, <h4>, <h5> y <h6>. Cada uno representa un nivel jerárquico diferente:
+        <h1> para el título principal, <h2> para subtítulos, <h3> para subtítulos de <h2>, y así sucesivamente. -->
+    <h1>03 - Fundamentos de texto en HTML</h1>
+    <!-- En HTML solo debe haber un <h1> por página. Representa el título principal del documento. -->
+
+    <p>La mayor parte del texto estructurado en HTML está compuesto por <strong>encabezados</strong> y <strong>párrafos</strong>.</p>
+    <!-- <p> representa un párrafo. El navegador añade automáticamente un espacio antes y después. -->
+    <!-- <strong> se usa para marcar texto con énfasis fuerte (semánticamente importante); se muestra en negrita. -->
+
+    <h2>Título de un capítulo del libro</h2>
+    <p>Este sería el contenido principal del capítulo. Un <em>capítulo</em> puede estar dividido en varias secciones.</p>
+    <!-- <em> («emphasis») se usa para énfasis leve; por defecto se muestra en cursiva. -->
+
+    <h3>Título de una sección del capítulo</h3>
+    <p>Esta sección amplía una parte específica del contenido del capítulo anterior.</p>
+
+    <h2>Énfasis de texto</h2>
+    <p>HTML permite dar <em>énfasis visual</em> y semántico al contenido:</p>
+    <ul>
+        <!-- <ul> crea una lista no ordenada (con viñetas). -->
+        <li><code>&lt;strong&gt;</code>: Indica un texto importante (se ve en negrita). Por ejemplo: <strong>importante</strong>.</li>
+        <li><code>&lt;em&gt;</code>: Indica énfasis (se ve en cursiva). Por ejemplo: <em>enfatizado</em>.</li>
+        <li><code>&lt;mark&gt;</code>: Resalta texto como si estuviera subrayado con marcador. Por ejemplo: <mark>resaltado</mark>.</li>
+        <!-- <mark> se usa para resaltar texto relevante en un contexto determinado. -->
+        <li><code>&lt;b&gt;</code>: Resalta texto con estilo negrita **sin énfasis semántico**. Por ejemplo: <b>nombre de producto</b>.</li>
+        <!-- <b> se usa para resaltar texto visualmente (negrita) sin implicar que es importante. En HTML5 puede usarse para destacar nombres de productos, frases clave, etc. -->
+        <li><code>&lt;i&gt;</code>: Muestra texto en cursiva **sin énfasis semántico**. Por ejemplo: <i>palabra extranjera</i>.</li>
+        <!-- <i> se usa para representar fragmentos que tradicionalmente se muestran en cursiva, como expresiones extranjeras, pensamientos, taxonomías, etc. -->
+    </ul>
+
+    <h2>Listas en HTML</h2>
+    <p>Las listas permiten agrupar elementos relacionados:</p>
+
+    <ol>
+        <!-- <ol> crea una lista ordenada (numerada). -->
+        <li>Primer ítem de la lista numerada.</li>
+        <li>Segundo ítem de la lista numerada.</li>
+    </ol>
+
+    <ul>
+        <!-- <ul> crea una lista no ordenada (con viñetas). -->
+        <li>Ítem de lista sin orden.</li>
+        <li>Otro ítem importante.</li>
+    </ul>
+
+    <!-- <li> representa un elemento individual dentro de una lista, ya sea ordenada (<ol>) o no ordenada (<ul>). 
+         Cada <li> es un ítem y se renderiza con un número o viñeta dependiendo del tipo de lista. -->
+
+    <!-- 
+        IMPORTANCIA DE UNA BUENA ESTRUCTURA DE TEXTO EN HTML:
+        - Mejora la accesibilidad (lectores de pantalla entienden mejor el contenido).
+        - Mejora el SEO (los motores de búsqueda comprenden mejor la jerarquía del contenido).
+        - Permite aplicar estilos de forma más eficaz usando CSS.
+        - Hace el código más legible y mantenible para otros desarrolladores.
+    -->
+</body>
+</html>
