@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Este documento explora en profundidad los principales elementos semánticos de HTML5.
+
+    ➤ ¿Qué son los elementos semánticos?
+    Son etiquetas que describen explícitamente el propósito del contenido que envuelven.
+    Permiten que el navegador, los motores de búsqueda y las tecnologías de asistencia comprendan
+    mejor la estructura del sitio web.
+
+    ➤ ¿Por qué son importantes?
+    - Mejoran la accesibilidad para lectores de pantalla.
+    - Favorecen el posicionamiento SEO.
+    - Hacen el código más claro y mantenible para desarrolladores.
+
+    ➤ ¿Qué se incluye en este archivo?
+    - Elementos semánticos principales: <main>, <article>, <section>, <aside>, <header>, <nav>, <footer>.
+    - Elementos no semánticos: <div>, <span>.
+    - Elementos visuales de separación: <br>, <hr>.
+-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos Semánticos en HTML</title>
+    </head>
+    <body>
+
+        <header>
+            <!-- <header> representa contenido introductorio. 
+                Si se encuentra dentro de <body>, es el encabezado principal.
+                Si está dentro de <article> o <section>, es el encabezado de esa sección. -->
+            <h1>05 - Elementos Semánticos en HTML</h1>
+            <p>Exploración de las etiquetas semánticas más importantes del lenguaje HTML5.</p>
+        </header>
+
+        <nav>
+            <!-- <nav> contiene enlaces de navegación principal. No debe incluir enlaces secundarios o irrelevantes. -->
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- <main> encierra el contenido principal de la página. Solo debe usarse una vez por documento.
+                No debe anidarse en otros elementos y debe ir directamente dentro de <body>. -->
+            <article>
+                <!-- <article> representa contenido que tiene sentido por sí solo, como una entrada de blog o noticia. -->
+                <header>
+                    <h2>Ejemplo de artículo independiente</h2>
+                    <p>Publicado el <time datetime="2025-06-25">25 de junio de 2025</time></p>
+                </header>
+                <p>Este artículo contiene información útil que puede compartirse o reutilizarse fuera del sitio web.</p>
+
+                <section>
+                    <!-- <section> representa una sección funcional dentro de un artículo o página. 
+                        Es buena práctica comenzar cada sección con un encabezado. -->
+                    <h3>Sección dentro del artículo</h3>
+                    <p>Esta sección desarrolla un aspecto específico del tema principal.</p>
+                </section>
+
+                <footer>
+                    <!-- <footer> dentro de <article> representa información sobre el autor, licencias, etc. -->
+                    <p>Autor: Juan Pérez</p>
+                </footer>
+            </article>
+
+            <aside>
+                <!-- <aside> representa contenido relacionado pero no esencial al flujo principal del contenido. 
+                    Puede incluir enlaces, biografías, citas, publicidad, etc. -->
+                <h2>Contenido relacionado</h2>
+                <ul>
+                    <li><a href="#">Otra entrada del blog</a></li>
+                    <li><a href="#">Notas del autor</a></li>
+                </ul>
+            </aside>
+        </main>
+
+        <hr>
+        <!-- <hr> representa una separación temática entre secciones. También se usa como separación visual. -->
+
+        <section>
+            <h2>Elementos no semánticos</h2>
+            <p>Cuando no hay una etiqueta semántica adecuada, se puede usar un contenedor genérico:</p>
+
+            <div class="caja">
+                <!-- <div> es un contenedor genérico sin significado semántico. Se usa para agrupar elementos. 
+                    Es muy útil para aplicar estilos con CSS o para scripts con JavaScript. -->
+                <p>Este contenido está agrupado en un <code>&lt;div&gt;</code> para aplicar estilos o lógica.</p>
+            </div>
+
+            <p>También podemos destacar una palabra con <span class="resaltado">estilo personalizado</span>.</p>
+            <!-- <span> es un contenedor en línea sin semántica, útil para aplicar estilos dentro de un párrafo. -->
+        </section>
+
+        <section>
+            <h2>Otros elementos útiles</h2>
+            <p>Cuando necesitas un salto de línea forzado, puedes usar <code>&lt;br&gt;</code>:</p>
+            <p>Dirección:<br>Calle Falsa 123<br>Springfield</p>
+            <!-- <br> se usa para saltos de línea dentro de un párrafo o línea continua, como en poemas o direcciones. -->
+        </section>
+
+        <footer>
+            <!-- <footer> representa el pie de página de todo el documento. Aquí se coloca información de contacto, derechos, etc. -->
+            <p>&copy; 2025 - Todos los derechos reservados</p>
+        </footer>
+
+    </body>
+</html>
