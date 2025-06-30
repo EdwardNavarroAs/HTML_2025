@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 10_multimedia.html
+
+    Este documento presenta cómo insertar y estructurar contenido multimedia en HTML, 
+    como imágenes, audio y video. También se abordan etiquetas semánticas como <figure> 
+    y <figcaption> para contextualizar estos elementos.
+
+    Se incluyen buenas prácticas de accesibilidad, formatos soportados y uso correcto de atributos.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>10 - Contenido Multimedia en HTML</h1>
+        <p>Aprende a insertar imágenes, audio, video y usar elementos semánticos como <code>&lt;figure&gt;</code>.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Imágenes</h2>
+            <!-- <img> muestra una imagen. Requiere al menos los atributos src y alt -->
+            <img src="images/img1.jpg" alt="Un fan art de una abejita enojada" width="300" loading="lazy">
+            <!-- loading="lazy" indica que la imagen se cargará de forma diferida -->
+
+            <!-- <figure> agrupa contenido visual (imagen, video, etc.) y su descripción -->
+            <!-- <figcaption> proporciona una descripción o título para el contenido de <figure> -->
+            <figure>
+                <img src="imagenes/img1.jpg" alt="abeja enojada" width="300">
+                <figcaption>Un arte conceptual de una abeja enojada</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>2. Audio</h2>
+            <!-- <audio> permite reproducir archivos de audio. El atributo controls muestra el reproductor -->
+            <audio controls>
+                <!-- <source> define cada fuente de audio disponible -->
+                <source src="audios/audio1.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </section>
+
+        <section>
+            <h2>3. Video</h2>
+            <!-- <video> muestra un video. Atributos: controls, autoplay, muted, loop, poster -->
+            <video width="400" controls poster="images/img2.png">
+                <source src="videos/video1.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+
+            <!-- <track> permite agregar subtítulos o transcripciones -->
+            <!-- src debe apuntar a un archivo .vtt (WebVTT) -->
+            <!-- <video width="400" controls>
+                <source src="video/tutorial.mp4" type="video/mp4">
+                <track src="subtitulos/tutorial.vtt" kind="subtitles" srclang="es" label="Español">
+            </video> -->
+        </section>
+
+        <section>
+            <h2>4. Otros elementos multimedia</h2>
+
+            <!-- <embed> inserta contenido multimedia externo como PDF o animaciones (uso limitado) -->
+            <embed src="files/file1.pdf" width="500" height="400" type="application/pdf">
+
+            <!-- <object> también inserta contenido externo. Puede servir como contenedor de respaldo -->
+            <object data="files/file1.pdf" type="application/pdf" width="500" height="400">
+                <p>Tu navegador no puede mostrar el archivo PDF. <a href="files/file1.pdf">Descargar PDF</a></p>
+            </object>
+        </section>
+
+        <section>
+            <h2>5. Buenas prácticas</h2>
+            <ul>
+                <li>Usa siempre <code>alt</code> en imágenes por accesibilidad.</li>
+                <li>Evita autoplay con sonido activado: puede ser molesto.</li>
+                <li>Proporciona subtítulos (<code>&lt;track&gt;</code>) en videos cuando sea posible.</li>
+                <li>Usa <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> para contenido visual contextualizado.</li>
+                <li>Utiliza <code>loading="lazy"</code> para cargar imágenes cuando entren en pantalla.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
