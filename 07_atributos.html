@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 07_atributos.html
+
+    Este documento explica el uso de los atributos en HTML,
+    los cuales permiten configurar el comportamiento, identificación,
+    accesibilidad o estilo de los elementos.
+
+    Existen:
+    - Atributos globales: pueden aplicarse a cualquier etiqueta HTML.
+    - Atributos específicos: solo se aplican a ciertos elementos.
+    - Atributos booleanos: su presencia indica una condición verdadera (ej. required, disabled).
+
+    Comprender los atributos es fundamental para crear sitios accesibles, funcionales y bien estructurados.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>07 - Atributos en HTML</h1>
+        <p>Los atributos HTML aportan información adicional a los elementos, modificando su comportamiento o proporcionando metadatos.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Atributos globales</h2>
+            <p>Estos atributos pueden aplicarse a casi cualquier etiqueta HTML:</p>
+            <ul>
+                <li><code>id</code>: Identificador único del elemento.</li>
+                <li><code>class</code>: Define una o más clases CSS.</li>
+                <li><code>title</code>: Texto emergente que aparece al pasar el mouse.</li>
+                <li><code>lang</code>: Define el idioma del contenido.</li>
+                <li><code>style</code>: Aplica estilos en línea directamente al elemento.</li>
+            </ul>
+
+            <p>Ejemplos de atributos globales en HTML:</p>
+            <!-- `title` muestra un texto cuando el usuario pasa el cursor sobre el párrafo. -->
+            <p title="Texto emergente al pasar el cursor">Pasa el mouse por este párrafo para ver el atributo <code>title</code>.</p>
+
+            <!-- `id` identifica unívocamente un elemento en la página. -->
+            <p id="parrafo-unico">Este párrafo tiene un <code>id</code> único.</p>
+
+            <!-- `class` permite agrupar varios elementos bajo un mismo estilo o funcionalidad. -->
+            <p class="importante">Este es un párrafo con clase <code>importante</code>.</p>
+
+            <!-- Combinación de múltiples atributos globales en un solo elemento -->
+            <p id="parrafo-ejemplo" class="destacado" title="Este es un párrafo importante" lang="es" style="color:blue;">
+                Este párrafo utiliza varios atributos globales.</p>
+
+            <!-- `data-*` permite almacenar datos personalizados en un elemento. Es útil para JavaScript -->
+            <p data-id="123" data-rol="admin">Este párrafo tiene atributos personalizados con <code>data-*.</code></p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Atributos específicos</h2>
+            <p>Algunos atributos solo se usan con ciertas etiquetas:</p>
+
+            <p>
+                <!-- <a> utiliza atributos específicos como href, target y rel -->
+                <!-- `href` define la URL de destino del enlace. `target="_blank"` abre el enlace en una nueva pestaña. -->
+                <!-- `rel="noopener noreferrer"` mejora la seguridad al usar target="_blank", evita que la nueva pestaña tenga acceso a la página original. -->
+                <a href="https://www.ejemplo.com" target="_blank" rel="noopener noreferrer">
+                    Enlace a ejemplo.com</a>
+            </p>
+
+            <p>
+                <!-- <img> inserta una imagen. 
+                     `src` define la ruta de la imagen.
+                     `alt` proporciona una descripción alternativa para accesibilidad o si la imagen no carga.
+                     `width` y `height` controlan el tamaño en píxeles. -->
+                <!-- <img> muestra una imagen en la página. -->
+                <img src="imagen.jpg" alt="Descripción de la imagen" width="200" height="150">
+            </p>
+
+            <p>
+                <!-- <input> tiene atributos como type, name, placeholder y required -->
+                <!-- <input> permite introducir datos (texto, correo, etc.). -->
+                <input type="email" name="correo" placeholder="Escribe tu correo" required>
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Atributos booleanos</h2>
+            <p>Estos atributos no requieren un valor; su mera presencia activa la funcionalidad:</p>
+
+            <!-- <form> agrupa campos de formulario para enviar datos. -->
+            <form>
+                <!-- <label> asocia un texto descriptivo a un campo de formulario. -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <!-- `required` obliga a completar este campo antes de enviar -->
+
+                <br><br>
+
+                <label>
+                    <input type="checkbox" checked disabled>
+                    Acepto los términos (marcado y deshabilitado)
+                </label>
+                <!-- `checked` y `disabled` son atributos booleanos -->
+            </form>
+        </section>
+
+        <section>
+            <h2>4. Buenas prácticas</h2>
+            <ul>
+                <li>Siempre usar <code>alt</code> en imágenes para accesibilidad.</li>
+                <li>Usar <code>label for</code> asociado a <code>input id</code> para formularios accesibles.</li>
+                <li>No abusar del atributo <code>style</code> en línea; es mejor usar CSS externo.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
