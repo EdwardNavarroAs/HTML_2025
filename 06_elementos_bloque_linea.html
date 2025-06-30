@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 06_elementos_bloque_linea.html
+
+    En este documento se explica la diferencia fundamental entre los elementos de **bloque** y los elementos **en línea** en HTML.
+
+    - Los elementos de **bloque** (block-level) ocupan todo el ancho disponible y comienzan en una nueva línea.
+      Se usan para estructurar el contenido en secciones grandes.
+
+    - Los elementos **en línea** (inline-level) ocupan solo el ancho necesario y no interrumpen el flujo del texto.
+      Se usan para marcar partes específicas dentro de un bloque.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de bloque y en línea</title>
+</head>
+<body>
+
+    <header>
+        <h1>06 - Elementos de bloque y en línea</h1>
+        <p>En HTML, cada etiqueta tiene un comportamiento visual y estructural: puede ser de bloque o en línea.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Qué es un elemento de bloque?</h2>
+            <p>
+                Un elemento de bloque ocupa todo el ancho disponible de su contenedor y comienza en una nueva línea.
+                Se usa para construir la estructura general del documento.
+            </p>
+
+            <p>Ejemplos de elementos de bloque comunes:</p>
+            <ul>
+                <li><code>&lt;div&gt;</code>: contenedor sin semántica (muy usado)</li>
+                <li><code>&lt;p&gt;</code>: representa un párrafo</li>
+                <li><code>&lt;h1&gt; ... &lt;h6&gt;</code>: encabezados de distintos niveles</li>
+                <li><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+            </ul>
+
+            <p>Ejemplos en HTML:</p>
+            <p>Este es un párrafo (elemento de bloque)</p>
+            <div>Este es un div (elemento de bloque)</div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>¿Qué es un elemento en línea?</h2>
+            <p>
+                Un elemento en línea no inicia una nueva línea. Se mantiene dentro del flujo del texto,
+                ocupando solo el espacio necesario.
+            </p>
+
+            <p>Ejemplos de elementos en línea comunes:</p>
+            <ul>
+                <li><code>&lt;span&gt;</code>: contenedor genérico en línea (sin semántica)</li>
+                <li><code>&lt;a&gt;</code>: enlace</li>
+                <li><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>: énfasis semántico</li>
+                <li><code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>: estilos sin semántica fuerte</li>
+                <li><code>&lt;br&gt;</code>: salto de línea</li>
+                <li><code>&lt;small&gt;</code>: texto menos relevante</li>
+                <li><code>&lt;time&gt;</code>: fecha u hora</li>
+                <li><code>&lt;wbr&gt;</code>: punto de quiebre en palabras largas</li>
+            </ul>
+
+            <p>Ejemplos en HTML:</p>
+            <p>Este texto incluye <strong>negrita semántica</strong>, <em>cursiva semántica</em>, y un <a href="#">enlace</a>.</p>
+            <p>Este texto contiene <strong>una palabra destacada</strong> dentro del mismo párrafo.</p>
+            <p>Este texto tiene un <a href="#">enlace en línea</a> y un <span>span personalizado</span>.</p>
+            <p>Podemos usar span para <span>una palabra especial</span> con estilo o script.</p>
+            <p>Texto con salto de línea:<br>Primera línea<br>Segunda línea</p>
+            <p>Fecha: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+            <p>Texto más pequeño con <small>nota legal o aclaración</small>.</p>
+            <p>Palabra muy_larga_y_sin_espacios<wbr>_que_necesita_quiebre.</p>
+            
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Resumen de diferencias</h2>
+            <ul>
+                <li><strong>Bloque:</strong> Comienza en línea nueva y ocupa todo el ancho disponible.</li>
+                <li><strong>En línea:</strong> Permanece dentro del flujo del texto y solo ocupa su ancho necesario.</li>
+                <li>Los elementos de bloque pueden contener elementos de bloque o en línea.</li>
+                <li>Los elementos en línea normalmente no deben contener elementos de bloque.</li>
+                <li><code>&lt;br&gt;</code> y <code>&lt;wbr&gt;</code> ayudan con el flujo del texto.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso básico de HTML</p>
+    </footer>
+
+</body>
+</html>
