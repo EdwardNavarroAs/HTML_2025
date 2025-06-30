@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 08_elementos_especiales.html
+
+    Este documento presenta una colección de elementos HTML menos comunes, pero muy útiles.
+    Estos elementos permiten representar contenido como citas, abreviaturas, fechas, código, etc.
+
+    Algunos ofrecen semántica adicional para navegadores, lectores de pantalla o motores de búsqueda,
+    aunque otros se utilizan más con fines visuales o editoriales.
+
+    También se incluyen elementos ya usados anteriormente pero explicados aquí con más detalle: <time>, <address>, etc.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Especiales en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>08 - Elementos Especiales en HTML</h1>
+        <p>En esta sección exploramos elementos útiles para marcar citas, abreviaturas, fechas, código, definiciones y más.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Citas en HTML</h2>
+
+            <!-- <blockquote> representa una cita de bloque (larga). El atributo cite puede indicar la fuente. -->
+            <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+                HTML es el lenguaje con el que se construyen las páginas web.
+            </blockquote>
+
+            <!-- <q> representa una cita breve en línea. -->
+            <p>Como dijo Tim Berners-Lee: <q>La Web está hecha para todos</q>.</p>
+
+            <!-- <cite> representa el título de una obra. -->
+            <p>La obra <cite>Don Quijote de la Mancha</cite> fue escrita por Miguel de Cervantes.</p>
+        </section>
+
+        <section>
+            <h2>2. Abreviaturas</h2>
+
+            <!-- <abbr> representa una abreviatura. El atributo title muestra el significado completo. -->
+            <p>HTML significa <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+        </section>
+
+        <section>
+            <h2>3. Superíndices y subíndices</h2>
+
+            <!-- <sup> representa contenido en superíndice (ej. potencias) -->
+            <!-- <sub> representa contenido en subíndice (ej. fórmulas químicas) -->
+            <p>El agua es H<sub>2</sub>O.</p>
+            <p>5<sup>2</sup> = 25.</p>
+        </section>
+
+        <section>
+            <h2>4. Código informático</h2>
+
+            <!-- <code> representa fragmentos de código -->
+            <!-- <pre> conserva los espacios y saltos de línea -->
+            <!-- <var> representa una variable -->
+            <!-- <kbd> representa una entrada de teclado -->
+            <!-- <samp> representa una salida de un programa -->
+
+            <p>Para imprimir en JavaScript, usa <code>console.log("Hola")</code>.</p>
+
+            <pre>
+function saludo() {
+    console.log("Hola mundo");
+}
+            </pre>
+
+            <p>La variable <var>usuario</var> contiene el nombre del visitante.</p>
+            <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+            <p>El programa respondió: <samp>Error 404: recurso no encontrado</samp>.</p>
+        </section>
+
+        <section>
+            <h2>5. Fechas y horas</h2>
+
+            <!-- <time> representa fechas y horas. El atributo datetime facilita su interpretación. -->
+            <p>El evento tendrá lugar el <time datetime="2025-07-01">1 de julio de 2025</time>.</p>
+        </section>
+
+        <section>
+            <h2>6. Información de contacto</h2>
+
+            <!-- <address> representa información de contacto del autor o sitio -->
+            <address>
+                Escrito por <a href="mailto:contacto@ejemplo.com">Juan Pérez</a><br>
+                Medellín, Colombia
+            </address>
+        </section>
+
+        <section>
+            <h2>7. Otros elementos útiles</h2>
+
+            <!-- <mark> resalta texto importante o buscado -->
+            <p>Resultado de búsqueda: El lenguaje <mark>HTML</mark> es esencial para la web.</p>
+
+            <!-- <dfn> marca la primera definición de un término -->
+            <p><dfn>API</dfn> es un conjunto de funciones que permite el acceso a funcionalidades de un software.</p>
+
+            <!-- <del> y <ins> marcan texto eliminado o insertado -->
+            <p>Este producto costaba <del>$50</del> ahora cuesta <ins>$35</ins>.</p>
+
+            <!-- <bdi> aísla texto de diferente dirección de escritura -->
+            <p>Usuario: <bdi>أحمد</bdi> (5 mensajes nuevos)</p>
+
+            <!-- <bdo> fuerza la dirección del texto -->
+            <p><bdo dir="rtl">Este texto se muestra de derecha a izquierda</bdo></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
