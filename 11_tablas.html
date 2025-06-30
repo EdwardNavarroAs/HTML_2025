@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 11_tablas.html
+
+    Este documento introduce el uso de tablas en HTML para mostrar datos tabulares. 
+    Se cubren las etiquetas principales como <table>, <tr>, <th>, <td>, <caption>, 
+    así como atributos para accesibilidad como scope, y buenas prácticas para estructurar 
+    datos de manera clara y accesible.
+
+    NOTA IMPORTANTE:
+    - Aunque técnicamente es posible anidar tablas (una tabla dentro de otra), esta práctica está desaconsejada.
+      Provoca problemas de accesibilidad, hace que el código sea más difícil de mantener y rompe con diseños responsivos modernos.
+      Por lo tanto, no se aborda en este curso. Se recomienda usar CSS (Flexbox o Grid) para organizar el contenido visual.
+
+    - El atributo 'border' usado en este archivo es solo con fines visuales para ver claramente las tablas.
+      No se recomienda su uso en proyectos reales. El enfoque correcto es aplicar estilos mediante CSS.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>11 - Tablas en HTML</h1>
+        <p>Las tablas se utilizan para mostrar datos estructurados en filas y columnas.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Estructura básica de una tabla</h2>
+            <!-- 
+                <table>: Crea la tabla.
+                <tr>: Table row. Representa una fila.
+                <th>: Table header. Celda de encabezado. Se muestra en negrita y centrado por defecto.
+                <td>: Table data. Celda de datos.
+            -->
+            <!--border permite darle un borde a la tabla pero es obsoleto (solo se usa aqui de modo visual, pero el método correcto es utilizar CSS para esto)-->
+            <table border="1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Ciudad</th>
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <td>28</td>
+                    <td>Bogotá</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>32</td>
+                    <td>Medellín</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2. Agregar título a la tabla</h2>
+            <!-- <caption>: Proporciona un título a la tabla. Debe colocarse inmediatamente después de <table>. -->
+            <table border="1">
+                <caption>Lista de estudiantes</caption>
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Curso</th>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Matemáticas</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>3. Secciones de tabla: <thead>, <tbody>, <tfoot></h2>
+            <!-- 
+                <thead>: Agrupa los encabezados.
+                <tbody>: Agrupa las filas de contenido.
+                <tfoot>: Agrupa el pie de tabla (suma, totales, etc.).
+                Estas secciones mejoran la organización y accesibilidad.
+            -->
+            <table border="1">
+                <caption>Ventas del mes</caption>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lápices</td>
+                        <td>100</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Cuadernos</td>
+                        <td>50</td>
+                        <td>$200</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td>$250</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>4. Accesibilidad: Uso de scope</h2>
+            <!-- 
+                <th scope="col">: Define que la celda de encabezado aplica a una columna.
+                <th scope="row">: Define que aplica a una fila.
+                Esto ayuda a lectores de pantalla a entender mejor la tabla.
+            -->
+            <table border="1">
+                <caption>Notas finales</caption>
+                <tr>
+                    <th scope="col">Estudiante</th>
+                    <th scope="col">Nota</th>
+                </tr>
+                <tr>
+                    <th scope="row">Carlos</th>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <th scope="row">Laura</th>
+                    <td>5.0</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>5. Buenas prácticas</h2>
+            <ul>
+                <li>Usa <code>&lt;caption&gt;</code> para describir el propósito de la tabla.</li>
+                <li>Organiza tu tabla con <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code>.</li>
+                <li>Usa <code>scope</code> en <code>&lt;th&gt;</code> para mejorar la accesibilidad.</li>
+                <li>Evita usar tablas para maquetar contenido (solo para datos tabulares).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
