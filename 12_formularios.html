@@ -152,6 +152,28 @@
             </ul>
         </section>
 
+        <section>
+            <h2>8. Importancia del atributo <code>name</code></h2>
+            <!-- 
+                El atributo name es obligatorio para que un campo sea incluido en los datos enviados por el formulario.
+                Si un campo no tiene atributo name, su valor NO será enviado al servidor.
+            -->
+            <p>El atributo <code>name</code> es fundamental en cada campo de entrada:</p>
+            <ul>
+                <li>Actúa como la <strong>clave</strong> en el par clave-valor que se envía al servidor.</li>
+                <li>Sin <code>name</code>, el campo se ignora al enviar el formulario.</li>
+            </ul>
+
+            <h3>Ejemplo correcto:</h3>
+            <pre><code>&lt;input type="text" name="usuario" value="Ana"&gt;</code></pre>
+            <p>Se enviará como: <code>usuario=Ana</code></p>
+
+            <h3>Ejemplo incorrecto (sin name):</h3>
+            <pre><code>&lt;input type="text" value="Ana"&gt;</code></pre>
+            <p><strong>No se enviará ningún dato</strong> al servidor en este caso.</p>
+        </section>
+
+
     </main>
 
     <footer>
