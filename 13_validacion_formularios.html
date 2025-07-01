@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 13_validacion_formularios.html
+
+    Este documento explica cómo realizar validaciones de formularios utilizando únicamente HTML5.
+    HTML permite aplicar validaciones básicas directamente con atributos, sin necesidad de JavaScript. 
+    Sin embargo, cuando se necesita un mayor control o lógica más compleja en las validaciones se debe utilizar Javascript
+
+    Tipos de validación abordados:
+    - Campos obligatorios (required)
+    - Longitud mínima y máxima (minlength, maxlength)
+    - Rango de números (min, max)
+    - Formatos específicos (type, pattern)
+    - Mensajes personalizados (title)
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formularios en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>13 - Validación de Formularios con HTML5</h1>
+        <p>Aprende a validar formularios de forma automática usando atributos HTML.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Campo obligatorio</h2>
+            <!-- El atributo required hace que el campo sea obligatorio -->
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Validación de tipo</h2>
+            <!-- type="email" verifica que el texto tenga formato de correo -->
+            <form>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. Longitud mínima y máxima</h2>
+            <!-- minlength y maxlength definen límites de caracteres -->
+            <form>
+                <label for="usuario">Usuario (4 a 10 caracteres):</label>
+                <input type="text" id="usuario" name="usuario" minlength="4" maxlength="10" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>4. Rango de números</h2>
+            <!-- min y max definen el rango permitido -->
+            <form>
+                <label for="edad">Edad (18 a 99):</label>
+                <input type="number" id="edad" name="edad" min="18" max="99" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>5. Validación con patrón personalizado</h2>
+            <!-- pattern permite validar con expresiones regulares -->
+            <form>
+                <label for="pais">País (solo letras):</label>
+                <input type="text" id="pais" name="pais" 
+                       pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" 
+                       title="Solo letras y espacios permitidos." required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>6. Buenas prácticas</h2>
+            <ul>
+                <li>Usa <code>required</code> para campos obligatorios.</li>
+                <li>Aplica <code>type</code> adecuado para cada campo (email, number, etc.).</li>
+                <li>Utiliza <code>minlength</code>, <code>maxlength</code>, <code>min</code> y <code>max</code> según el contexto.</li>
+                <li>Personaliza mensajes de error con <code>title</code>.</li>
+                <li>Evita usar solo validación HTML en contextos críticos (se recomienda validación en servidor también).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

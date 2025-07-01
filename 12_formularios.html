@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 12_formularios.html
+
+    Este documento introduce el uso de formularios en HTML, los cuales permiten recopilar información del usuario.
+    Un formulario puede incluir campos de texto, botones, casillas, listas desplegables, entre otros elementos.
+
+    Los formularios son esenciales para tareas como registros, búsquedas, encuestas o contacto con usuarios.
+
+    Este archivo explica:
+    - La estructura básica con <form>
+    - Tipos de entrada con <input>
+    - Asociar etiquetas con <label>
+    - Agrupar campos con <fieldset> y <legend>
+    - Uso de botones de envío y reinicio
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+
+    <header>
+        <h1>12 - Formularios en HTML</h1>
+        <p>Explora cómo capturar datos desde la web utilizando formularios bien estructurados y accesibles.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Estructura básica de un formulario</h2>
+            <!-- <form>: Agrupa todos los campos. 
+                 Atributos comunes:
+                 - action: URL a la que se enviarán los datos.
+                 - method: método HTTP (GET o POST) -->
+            <form action="/enviar" method="post">
+                <p>Este formulario no enviará datos reales, es solo un ejemplo.</p>
+            </form>
+        </section>
+
+        <section>
+            <h2>2. Campos de entrada básicos</h2>
+            <form>
+                <!-- <label>: Asocia un texto con un campo (usando for e id) -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"><br><br>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required><br><br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" max="120"><br><br>
+
+                <label for="clave">Contraseña:</label>
+                <input type="password" id="clave" name="clave"><br><br>
+            </form>
+        </section>
+
+        <section>
+            <h2>3. Botones y envío de datos</h2>
+            <!-- 
+                El atributo action se coloca en la etiqueta <form>, no en los botones.
+                Define a qué URL se enviarán los datos del formulario cuando se presione un botón de tipo submit.
+            -->
+            <form action="#" method="post">
+                <input type="text" name="dato" placeholder="Algo..."><br><br>
+                <!-- <button>: Usado para enviar o reiniciar un formulario -->
+                <!-- 
+                    <button type="submit"> envía los datos del formulario a la URL definida en el atributo action del <form>.
+                    No se define ninguna dirección en el botón; solo activa el envío.
+                -->
+                <button type="submit">Enviar</button>
+                <!-- 
+                    <button type="reset"> restablece todos los campos del formulario a sus valores iniciales.
+                -->
+                <button type="reset">Limpiar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>4. Otras entradas comunes</h2>
+            <form>
+
+                <p>Sexo:</p>
+                <!-- <input type="radio"> para seleccionar una opción entre varias -->
+                <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                <label><input type="radio" name="sexo" value="mujer"> Mujer</label><br><br>
+
+                <!-- <input type="checkbox"> permite marcar múltiples opciones -->
+                <p>Intereses:</p>
+                <label><input type="checkbox" name="interes" value="html"> HTML</label>
+                <label><input type="checkbox" name="interes" value="css"> CSS</label>
+                <label><input type="checkbox" name="interes" value="js"> JavaScript</label><br><br>
+
+                <!-- <select>: Lista desplegable -->
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="">-- Selecciona --</option>
+                    <option value="co">Colombia</option>
+                    <option value="mx">México</option>
+                    <option value="ar">Argentina</option>
+                </select><br><br>
+
+                <!-- <textarea>: Campo de texto multilínea -->
+                <label for="comentario">Comentarios:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>5. Agrupar campos relacionados</h2>
+            <!-- <fieldset>: Agrupa elementos relacionados -->
+            <!-- <legend>: Título para el grupo de campos -->
+            <form>
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <label for="tel">Teléfono:</label>
+                    <input type="tel" id="tel" name="telefono"><br><br>
+
+                    <label for="web">Sitio web:</label>
+                    <input type="url" id="web" name="sitio"><br><br>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>6. Buenas prácticas</h2>
+            <ul>
+                <li>Usa siempre <code>&lt;label&gt;</code> para asociar texto con los campos de entrada.</li>
+                <li>Agrega el atributo <code>required</code> cuando sea obligatorio completar un campo.</li>
+                <li>Utiliza <code>placeholder</code> para dar una pista sobre qué escribir.</li>
+                <li>Prefiere <code>&lt;button&gt;</code> en lugar de <code>&lt;input type="submit"&gt;</code>.</li>
+                <li>Agrupa campos relacionados con <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> para mejorar la accesibilidad.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Elementos nuevos en este archivo</h2>
+            <ul>
+                <li><code>&lt;form&gt;</code>: Agrupa campos que se pueden enviar al servidor.</li>
+                <li><code>&lt;input&gt;</code>: Campo versátil con muchos tipos (texto, email, número, etc.).</li>
+                <li><code>&lt;label&gt;</code>: Asocia texto con un campo de entrada.</li>
+                <li><code>&lt;select&gt;</code> y <code>&lt;option&gt;</code>: Menú desplegable con opciones.</li>
+                <li><code>&lt;textarea&gt;</code>: Área de texto para varias líneas.</li>
+                <li><code>&lt;fieldset&gt;</code>: Agrupa campos relacionados.</li>
+                <li><code>&lt;legend&gt;</code>: Título del grupo de <code>&lt;fieldset&gt;</code>.</li>
+                <li><code>&lt;button&gt;</code>: Botón para enviar o reiniciar el formulario.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
