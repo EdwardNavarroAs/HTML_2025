@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 13_introduccion_css.html
+
+    Este documento presenta una introducción al lenguaje CSS (Cascading Style Sheets),
+    que permite aplicar estilos visuales al contenido HTML.
+
+    En este archivo se conecta el mundo de la estructura (HTML) con el del diseño (CSS),
+    explicando cómo se aplican estilos y cómo el navegador interpreta el contenido
+    mediante el DOM.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a CSS</title>
+
+    <!-- Enlace a una hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Estilo interno: se aplica desde el propio HTML -->
+    <style>
+        /* selector de etiqueta */
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>13 - Introducción a CSS</h1>
+        <p>CSS es un lenguaje que permite aplicar estilos visuales a los elementos HTML.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. ¿Qué es CSS?</h2>
+            <p>CSS significa <strong>Hojas de Estilo en Cascada</strong> (Cascading Style Sheets) y sirve para controlar el aspecto visual de una página web: colores, fuentes, tamaños, espacios, posiciones y mucho más.</p>
+        </section>
+
+        <section>
+            <h2>2. HTML, DOM y CSS</h2>
+            <p>Cuando un navegador carga un documento HTML, crea una representación interna del contenido llamada <strong>DOM</strong> (Document Object Model).</p>
+            <p>CSS interactúa con este DOM para modificar la apariencia de los elementos, sin alterar su estructura.</p>
+        </section>
+
+        <section>
+            <h2>3. Formas de aplicar CSS</h2>
+            <ul>
+                <li><strong>En línea:</strong> A través del atributo <code>style</code> en la etiqueta HTML.</li>
+                <li><strong>Interno:</strong> Dentro de una etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code>.</li>
+                <li><strong>Externo:</strong> Mediante un archivo CSS enlazado con <code>&lt;link&gt;</code>.</li>
+            </ul>
+
+            <p>Ejemplo de estilo en línea:</p>
+            <!-- style aplica color al párrafo directamente (forma menos recomendable) -->
+            <p style="color: green; font-weight: bold;">Este párrafo usa estilo en línea.</p>
+        </section>
+
+        <section>
+            <h2>4. Estructura de CSS</h2>
+            <p>CSS está formado por reglas que combinan:</p>
+            <ul>
+                <li><strong>Selector:</strong> Indica a qué elemento aplicar el estilo.</li>
+                <li><strong>Propiedad:</strong> Característica visual a modificar (color, font-size, etc.).</li>
+                <li><strong>Valor:</strong> El nuevo valor que se asigna a la propiedad.</li>
+            </ul>
+            <pre>
+                <code>p {
+                    color: red;
+                    font-size: 16px;
+                }</code>
+            </pre>
+            <p>La regla anterior hace que todos los párrafos aparezcan en rojo y con tamaño 16px.</p>
+        </section>
+
+        <section>
+            <h2>5. Buenas prácticas</h2>
+            <ul>
+                <li>Prefiere siempre CSS externo para mantener el código HTML limpio y separado del estilo.</li>
+                <li>Evita estilos en línea, ya que dificultan el mantenimiento.</li>
+                <li>Utiliza selectores semánticos y clases descriptivas.</li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de HTML. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
